@@ -172,7 +172,7 @@ angular.module('ngScrollbar', []).directive('ngScrollbar', [
           page.height = element[0].offsetHeight;
           page.scrollHeight = transculdedContainer[0].scrollHeight;
 
-          if (page.height < page.scrollHeight) {
+          if (page.height < page.scrollHeight || attrs.hasOwnProperty('isPlaceholder')) {
             scope.showYScrollbar = true;
             scope.$emit('scrollbar.show');
 

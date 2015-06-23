@@ -11,6 +11,9 @@
     .scrollme {
       max-height: 200px;
     }
+    .scrollmePlaceholder {
+        height: 200px;
+    }
   </style>
 </head>
 <body>
@@ -34,6 +37,13 @@
         <p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/asafdav/ng-scrollbar">Learn more</a></p>
       </div>
     </div>
+    <div class="well" >
+       <div class="scrollmePlaceholder" ng-scrollbar is-bar-shown="barShown" is-placeholder>
+          <h1>Scroll me down!</h1>
+          <p>fixed height of 200px with a placeholder</p>
+          <p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/asafdav/ng-scrollbar">Learn more</a></p>
+      </div>
+      </div>
   </div>
 </div>
 

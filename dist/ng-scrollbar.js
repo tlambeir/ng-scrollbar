@@ -129,7 +129,7 @@ angular.module('ngScrollbar', []).directive('ngScrollbar', [
           track = angular.element(angular.element(tools.children()[0]).children()[1]);
           page.height = element[0].offsetHeight;
           page.scrollHeight = transculdedContainer[0].scrollHeight;
-          if (page.height < page.scrollHeight) {
+          if (page.height < page.scrollHeight || attrs.hasOwnProperty('isPlaceholder')) {
             scope.showYScrollbar = true;
             scope.$emit('scrollbar.show');
             // Calculate the dragger height
